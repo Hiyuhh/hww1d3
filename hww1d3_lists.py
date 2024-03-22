@@ -38,8 +38,22 @@ else:
 #Task 3: Using list methods, remove any student from the attended list who did not submit their assignment.
 submitted = ["Alice", "Bob", "Charlie", "David"]
 attended = ["Charlie", "Eve", "Alice", "Frank"]  
-kick = [name for name in attended if name in submitted]
-print(kick)
+# kick = [name for name in attended if name in submitted] ---> list comprehension 
+# print(kick)
+#------------------POP--------------#
+eve = attended.pop(1) # pop removes by index, by default it removes the last item
+print(eve)
+frank = attended.pop(2)
+print(frank)
+print(attended)
+
+#----------------REMOVE-------------#
+submitted = ["Alice", "Bob", "Charlie", "David"] 
+attended = ["Charlie", "Eve", "Alice", "Frank"]
+attended.remove("Eve") # remove removes by specific value
+attended.remove("Frank")
+print(attended)
+
 
 # 3. Advanced Slicing Techniques
     # Task 1: Given the list of temperatures:
